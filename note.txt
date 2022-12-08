@@ -1,0 +1,21 @@
+- gitignore : node_modules: để git không quản lí file naỳ
+
+- git init
+  git commit -m""
+
+
+  git log
+  :q  
+  git checkout...,
+  git checkout master
+
+
+- Phân loại JS: chạy đơn luồng nhưng bên dưới có node APIs xử lí đc code bằng C++ nên hoạt động đa luồng 
+- Điểm mạnh của Node JS là : 
+    + xử lí bài toán về hệ thống chịu tải lớn, xử lí mượt mà
+    + NodeJS có thể dùng để gọi các ứng dụng khác
+- gói modules built in (cs)
+- Lẹnh cập nhật
+- process.argv : lấy tham số khi truyền vào 
+- process là 1 chương trình lớn có thể tạo ra nhiều chuwogn trình con
+        vd: bật VS code là là 1 process, google lên cũng là 1 process 
