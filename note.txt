@@ -16,6 +16,12 @@
     + NodeJS có thể dùng để gọi các ứng dụng khác
 - gói modules built in (cs)
 - Lẹnh cập nhật
-- process.argv : lấy tham số khi truyền vào 
+- process.argv : lấy tham số khi truyền vào (BIẾN MÔI TRƯỜNG)
+
 - process là 1 chương trình lớn có thể tạo ra nhiều chuwogn trình con
         vd: bật VS code là là 1 process, google lên cũng là 1 process 
+- child_process
+    + child_process.exec : thực thi 1 câu lệnh
+    + child_process.execFile : thực thi 1 file
+    + child_process.folk : nhân bản
+    + child_process.spawn : tạo ra 1 terminal mới  

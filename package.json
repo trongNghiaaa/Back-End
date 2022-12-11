@@ -1,8 +1,12 @@
 {
     "scripts": {
-        "start": "nodemon --inspect server.js"
+        "start": "nodemon --inspect ./Buoi2/buoi2.js"
     },
     "devDependencies": {
         "nodemon": "^2.0.20"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "cli-progress": "^3.11.2"
     }
 }
