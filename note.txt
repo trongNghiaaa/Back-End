@@ -25,3 +25,38 @@
     + child_process.execFile : thực thi 1 file
     + child_process.folk : nhân bản
     + child_process.spawn : tạo ra 1 terminal mới  
+
+
+-Buổi 3: 
+ +) NoSql : ưu điểm linh động thay đổi cấu trúc , không có cấu trúc(schema) , truy xuất dữ liệu nhanh hơn , thích hợp lưu dữ liệu sơ lượng lớn
+ +) mySql : thuộc loại RDBMS (),cấu trúc cứng , có tính an toàn chặt chẽ hơn ,  có cơ chế transaction , commit khi mình thay đổi data hoặc đưa vào 1 transaction nếu nhưu có lỗi mình chỉ cần gõ lệnh 
+    rollback thì data sẽ trở vè như cũ , thích hợp lưu data quan trọng
+
+
+    +) Mongo server : để biến máy tính của mình thành 1 cái Database
+    +) Mongo shell : 
+    +) Mongo compass : giao diện Database
+    +) DB tool: cho mình nhiều câu lệnh hơn để backup, restrore
+
+        +) Collection : là 1 tập hợp các Document
+
+
+    Câu lệnh MongoDB : 
+                +) Model.find({điều kiện hoặc để trống
+                    usename: ...
+                    password: ...              
+                }) 
+
+
+                +) Model.create({})
+
+                +) Model.updateMany({diều kiện},{giá trị cẩn thay đổi
+                    key: "value"
+                })      (thay đổi các phàn tử tìm thấy)
+                
+                +)Model.updateOne({điều kiện}, {giá trị cần thay đổi
+                    key : value
+                })      (thay đổi phần tử dầu tiên tìm thấy)
+
+
+                +) Model.deleteMany({điểu kiện})    (nếu không có điều kiện thì xóa hết data base)
