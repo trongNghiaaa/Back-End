@@ -38,17 +38,22 @@
     +) Mongo compass : giao diện Database
     +) DB tool: cho mình nhiều câu lệnh hơn để backup, restrore
 
+    -)Các bước setup cơ bản Database: 
+        require('mongoose') => mongoose.connect('mongodb://127.0.0.1:27017/....') =>
+        => const Schema = mongoose.Schema => const Schema = new Schema({},{collection : '...'}) => const Model = mongoose.model('tên',Schema)
+
+
         +) Collection : là 1 tập hợp các Document
 
 
-    Câu lệnh MongoDB : 
+    Operator trong mongoose:  
                 +) Model.find({điều kiện hoặc để trống
                     usename: ...
                     password: ...              
                 }) 
 
 
-                +) Model.create({})
+                +) Model.create({1 hoặc nhiều data muốn thêm })
 
                 +) Model.updateMany({diều kiện},{giá trị cẩn thay đổi
                     key: "value"
@@ -60,3 +65,32 @@
 
 
                 +) Model.deleteMany({điểu kiện})    (nếu không có điều kiện thì xóa hết data base)
+
+                +) model.updateMany({điều kiện},{$set : {age: 20}}).then().catch() : sửa thành giá trị mới
+                +) model.updateMany({điều kiện},{$inc : {age: +- 20}}).then().catch() : tăng thêm hoặc giảm đi 20 vào age gốc      ($increase: tăng)
+                 
+                +) insertMany
+                +) Model.find({
+                    +) {$gt: ...} : lớn hơn    {$lt: ...} :  nhỏ hơn
+                    +) {$gte : ...} :  lớn hơn hoặc bằng    {$lte: ...} :  nhỏ hơn hoặc bằng
+                    +) /abc/ (regex): tìm data bất kì  có chứa 'abc' bên trong
+                    +) $or : [dk1,dk2]: điều kiện ghép                    Vd:   $or[{age : {$gte:20}},{salary : {$lte:2000}]
+                    +) $in : [...,...,...]: nằm trong các giá trị này     Vd: age: {$in : [1000,2000,3000]}
+                })
+                .limit() : lấy bao nhiêu phần tử
+                .skip() : bỏ qua bao nhiêu phần tử trước đó tính từ phần tử đầu tiên tìm thấy 
+                .sort('...') : sắp xếp
+
+
+
+B1: Thiết kế DB
+    id 
+    product,
+    Category,
+    order,
+    comment,
+
+
+B2: thêm 100 sản phẩm, sửa những sản phẩm có số lượng nhỏ hơn 5 thì thêm thuộc tính : "sắp hết hàng"
+
+B3: crawl data của 1 shop nào đó : tên , số lượng => insert vào DB

@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "nodemon --inspect ./Buoi2/buoi2.js"
+        "start": "nodemon --inspect ./DB.js"
     },
     "devDependencies": {
         "nodemon": "^2.0.20"
