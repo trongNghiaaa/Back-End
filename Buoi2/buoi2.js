@@ -5,14 +5,17 @@ const url = require('url');
 const { execFile, exec, spawn } = require('child_process');
 const cliProgress = require('cli-progress');
 const chalk = require('chalk')
-
-
-
 const error = chalk.bold.red;
 const warning = chalk.hex('#FFA500'); // Orange color
 
-console.log(error('Error!'));
-console.log(warning('Warning!'));
+
+
+
+// console.log(error('Error!'));
+// console.log(warning('Warning!'));
+
+
+
 const server = http.createServer((request, response) => {
         fs.readFile(path.join(__dirname, 'index.html'), 'utf-8', (err, data) => {
             if (data) {

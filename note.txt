@@ -94,3 +94,7 @@ B1: Thiết kế DB
 B2: thêm 100 sản phẩm, sửa những sản phẩm có số lượng nhỏ hơn 5 thì thêm thuộc tính : "sắp hết hàng"
 
 B3: crawl data của 1 shop nào đó : tên , số lượng => insert vào DB
+
+
+
+-- Middleware : là 1 function callback (request,response, next)=>{} có tác dụng 
