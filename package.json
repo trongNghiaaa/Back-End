@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "nodemon --inspect server.js"
+        "start": "nodemon ./RESTAPI/index.js"
     },
     "devDependencies": {
         "nodemon": "^2.0.20"
