@@ -98,3 +98,35 @@ B3: crawl data của 1 shop nào đó : tên , số lượng => insert vào DB
 
 
 -- Middleware : là 1 function callback (request,response, next)=>{} có tác dụng 
+
+
+cors ; là Middleware cho phép 
+
+proxy: 1 con server trung gian 
+
+Middleware: là cánh cửa trungg gian ở giữa , app.use, app.get  (req,res,next)=>{}   (err, req,res, next)=>{}
+                    next(),    next(data)
+
+Morgan: console.log ra cacs thông tin request
+        stream: fs.createWriteStream('./access.log', {flag:'a'})
+Express-rate-limit: giới hạn thông tin
+Cors() : chính sách chia sẻ thông tin cho đối tác :web browser - check origin 
+Winston: log file 
+
+cookie: có hạn+ lưu được ít => đính kèm cùng header
+webstoreage - localStorage : không hạn+ lưu được nhiều
+
+BVN: Sử dung express-generator
+        npm i -g express-generator
+        express --view=ejs my-server 
+        npm install
+        npm start
+
+    B2: tất cả API có query là role  = (admin, guest)
+        VD: GET /product?role=admin
+        nếu admin => được phép CRUD API     => 10req/1phut
+        nếu guest => chỉ được dùng API xem  => 2req/1phut
+    B3: server localhost:3000 => chạy file html ở liveserver localhost:5000
+    trong html file ,call hoăc fetch 
+    B4: xử lý lỗi với Winston
+

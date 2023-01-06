@@ -9,5 +9,11 @@
 </head>
 <body>
     <h1>Home</h1>
+    <script>
+        fetch('http://localhost:3000/classes')
+        .then(response => {
+            return response.json()
+        })
+    </script>
 </body>
 </html>

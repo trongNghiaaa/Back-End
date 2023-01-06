@@ -1,8 +1,10 @@
 const mongoose = require('./connectDB')
 const Schema = mongoose.Schema;
+const ObjectId = Schema.ObjectId;
 
 
 const classesSchema = new Schema({
+    id: ObjectId,
     name: String,
     student: Number
 },{
